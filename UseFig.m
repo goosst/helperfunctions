@@ -1,5 +1,5 @@
 function FigHandle=UseFig(FigureName)
-% author sg
+% author stijn goossens
 % if figure with FigureName does not exist, create it
 % if figure with FigureName exists, bring it forward
 
