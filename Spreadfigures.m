@@ -1,16 +1,14 @@
 function Spreadfigures(varargin)
 % Author: Stijn Goossens 22/04/2014
-% spread plotted figures over entire screen and link all x-axes
-% varargin: give figure handles of figures that need to be spreaded over the screen
-% e.g. Spreadfigures([f1;f2]) (function UseFig https://github.com/goosst/matlabfunctions/ can be useful for this)
+% spread plotted figures over entire screen 
 % if no input is given to the function: spread all figures over screen and
 % link all x-axes
 % 
-% possible arguments:
+% optional arguments:
 % Spreadfigures('tight','nolink',[fighandle1;fighandle2])
 % * 'tight': remove unnecessary whitespace in borders 
 % * 'nolink': don't link x-axes
-% * '[fighandle1;fighandle2]
+% * '[fighandle1;fighandle2] (function UseFig https://github.com/goosst/matlabfunctions/ can be useful for this)
 %
 % Example:
 % f1=figure(1)
@@ -27,6 +25,7 @@ function Spreadfigures(varargin)
 % title('test2','Fontsize',16)
 % grid on
 % 
+% % test out several options:
 % % Spreadfigures
 % % Spreadfigures('tight',[f1;f2])
 % % Spreadfigures([f1;f2],'nolink','tight')
