@@ -1,0 +1,11 @@
+clc
+clear variables
+close all
+
+dbstop if error
+
+folders=dir(pwd);
+
+
+
+

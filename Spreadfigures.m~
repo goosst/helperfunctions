@@ -5,12 +5,12 @@ function Spreadfigures(varargin)
 % e.g. Spreadfigures([f1;f2])  (function UseFig can be useful for this)
 % if no input is given to the function: spread all figures over screen and
 % link all x-axes
-% 
-% possible arguments:
+%
 % Spreadfigures('tight','nolink',[fighandle1;fighandle2])
 % * 'tight': remove unnecessary whitespace in borders 
 % * 'nolink': don't link x-axes
 % * '[fighandle1;fighandle2]
+% order and amount of arguments 
 %
 % Example:
 % f1=figure(1)
