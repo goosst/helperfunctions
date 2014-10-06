@@ -11,24 +11,24 @@ function Spreadfigures(varargin)
 % * '[fighandle1;fighandle2] (function UseFig https://github.com/goosst/matlabfunctions/ can be useful for this)
 %
 % Example:
-% f1=figure(1)
-% plot([0:10])
-% xlabel('time(s)','Fontsize',15)
-% ylabel('unit 1','Fontsize',15)
-% title('test','Fontsize',16)
-% grid on
+% clc
+% close all
+% clear variables
 % 
-% f2=figure(2)
-% plot([0:2:20])
-% xlabel('time(s)','Fontsize',15)
-% ylabel('unit 2','Fontsize',15)
-% title('test2','Fontsize',16)
-% grid on
+% for i=1:5
+%    UseFig(['test',num2str(i)])
+%     plot(rand([10,1]),'*')
+%     xlabel('time(s)','Fontsize',15)
+%     ylabel('unit 1','Fontsize',15)
+%     title('test','Fontsize',16)
+%     grid on
+% end
+% 
 % 
 % % test out several options:
-% % Spreadfigures
-% % Spreadfigures('tight',[f1;f2])
-% % Spreadfigures([f1;f2],'nolink','tight')
+% Spreadfigures
+% % Spreadfigures('tight')
+% % Spreadfigures('tight',[UseFig('test1');UseFig('test2')])
 
 
 
@@ -76,6 +76,12 @@ FigureWidth=width/FiguresNextToEachOther;
 
 i=1;
 for j=1:NumberOfRows   
+    
+    % check if a full row can be filled
+    if size(figs,1)-i+1 < FiguresNextToEachOther
+        FigureWidth=width/(size(figs,1)-i+1);
+    end
+        
     for k=1:FiguresNextToEachOther%size(figs,1)
 
         if options.tight==1
