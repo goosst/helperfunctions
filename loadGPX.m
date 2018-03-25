@@ -1,6 +1,6 @@
 function [coordinates,timeStamp]=loadGPX(filename)
 %25 march 2018, read in gpx file (tested on gpx files downloaded from
-%strava)
+%strava), does not make use of slow xml converters and readers
 % coordinates=[lat,lon,alt]
 % timeStamp = datenum format matlab
 %
