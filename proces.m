@@ -7,6 +7,8 @@ close all
 %dbstop if error
 pkg load io
 
+cd('/home/stijn/Documents/ing')
+
 filename='377-0792019-51 LA (EUR) 20180101 - 20190322.csv';
 keywords={'tank','diesel'};
 data=csv2cell(filename,';');
